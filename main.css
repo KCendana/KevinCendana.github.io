@@ -1,52 +1,84 @@
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
 html {
-	/* background-color: #E7CBAE; */
-	background-image: url(images/boldWallpaper.jpg);
+	background-image: linear-gradient(#6dd2fc, white);
+	font-family: Arial;
 }
 
-body {
-	border: 4mm ridge rgba(170, 50, 220, .6);
-	border-color: red;
+/* Main Area (Everything except light blue background) */
+div {
 	border-radius: 45px;
 	border-width: 8px;
-	background-position: left top;
-	background-repeat: repeat;
-	background-color: white;
 	font-size: 120%;
 	width: 99%;
-	max-width: 920px;
+	max-width: 800px;
 	margin: 0 auto;
-	margin-top: 20px;
-	margin-bottom: 30px;
+	margin-top: 45px;
+	margin-bottom: 230px;
+	background-image: linear-gradient(#2abaf7, white);
+	box-shadow: -9px 5px #66d2ff; 
+}
+main {
+	padding-top: 20px;
+	display: flex;
+}
+section {
+	flex-basis: 70%;
+	order: 1;
+	padding: 0 2.5% 20px 2.5%;
 }
 
-/* Header */
-header {
-	font-weight: 900;
-	font-size: 130%;
-	background-image: url(images/wallpaper.png);
+/* Picture */
+.Kevin {
+	height: 210px;
+	width: 170px;
+	float: left;
+	border: 4mm ridge rgba(170, 50, 220, .6);
+	border-color: #2abaf7;
+	border-radius: 50%;
+	border-width: 4px;
+	margin-right: 40px;
+	margin-top: 18px;
+	margin-bottom: 10px;
+}
+figure {
+	float: left;
+}
+
+/* Picture Caption */
+.name {
+	font-size: 140%;
+}
+.title {
+	padding-left: 20%;
+	font-size: 80%;
+}
+
+/* Body of the website */
+.greetings {
+	font-size: 120%;
+}
+section h2 { /* Greetings */
 	color: #000000;
-	text-align: center;
-	padding: 1.5em 0 2em 0;
-	border-bottom: 4mm ridge rgba(170, 50, 220, .6);
-	border-width: 8px;
-	border-color: red;
-}
-
-/*Computer Science Student*/
-header h3 {
-	padding-top: 5px;
 	font-size: 130%;
-	font-style: italic;
+	padding: .5em 0 .25em 0;
+}
+section p { /*Spacing for every sentence */
+	padding-bottom: .3em;
+}
+article { /*Bottom border for article*/
+	padding-left: 10px;
+	font-size: 105%;
+	width: 120%;
 }
 
-/* Navigation Menu */
-
+/* Navigation Buttons */
 #nav_menu ul {
+	font-size: 80%;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -55,6 +87,7 @@ header h3 {
 #nav_menu ul li {
 	float: left;
     width: 33.33%;                 /* 160 / 800 x 100 */
+	margin-bottom: 10px;
 }
 #nav_menu ul li a {
     display: block;
@@ -62,12 +95,12 @@ header h3 {
     padding: 1em 0;
 	margin: 10px 20px 0px 20px;
     text-decoration: none;
-	background-image: url(images/wallpaper.png);
+	background-image: url(images/pattern.png);
 	background-color: white;
 	background-position: left top;
 	background-repeat: repeat;
 	border: 4mm ridge rgba(170, 50, 220, .6);
-	border-color: red;
+	border-color: #b5cfff;
 	border-radius: 45px;
 	border-width: 4px;
     color: black;
@@ -83,83 +116,22 @@ header h3 {
     display: block;
 }
 
-/* Picture */
-.Kevin {
-	height: 260px;
-	width: 200px;
-	float: left;
-	border: 4mm ridge rgba(170, 50, 220, .6);
-	border-color: red;
-	border-radius: 10px;
-	border-width: 4px;
-	margin-right: 30px;
-	margin-top: 13px;
-}
-
-main {
-	display: flex;
-}
-
-section {
-	flex-basis: 70%;
-	order: 1;
-	padding: 0 2.5% 20px 2.5%;
-}
-
-/* Body of the website */
-
-.greetings {
-	font-size: 120%;
-}
-
-section h2 { /* Greetings */
-	color: #000000;
-	font-size: 130%;
-	padding: .5em 0 .25em 0;
-}
-
-section p { /*Spacing for every sentence */
-	padding-bottom: .5em;
-}
-
-article { /*Bottom border for article*/
-	font-size: 110%;
-	width: 120%;
-	padding-bottom: 10px;
-}
-
-/* Buttons for links */
-.button {
-  margin-bottom: 10px;
-  margin-left: 20px;
-  background-image: url(images/wallpaper.png);
-  border-radius: 25px;
-  background-position: left top;
-  background-repeat: repeat;
-  background-color: white;
-  border: solid;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-/* Border for Links*/
-.links {
-	margin-top: 7px;
-	border-bottom: 2px solid #ff0000;
-}
-
 /* Contact Me */
-
-.phone {
-	margin-bottom: -10px;
-}
-
-/* Bottom of the page */
 footer {
-	padding-bottom: 10px;
-	
+	text-align: center;
+	padding-bottom: 40px;
+	margin-top: -20px;
+}
+.phoneIcon {
+  height: 2%;
+  width: 2%;
+}
+.emailIcon {
+  white-space: nowrap;
+  height: 15%;
+  width: 3%;
+}
+.contactText {
+	font-size: 70%;
+	margin-bottom: -10px;
 }
