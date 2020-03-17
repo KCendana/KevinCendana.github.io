@@ -5,82 +5,78 @@
 }
 
 html {
+	height: 90%;
 	background-image: linear-gradient(#6dd2fc, white);
 	background-repeat: no-repeat;
 	background-size: 110%;
-	font-family: Arial;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	height: 100%;
 }
 
 /* Main Area (Everything except light blue background) */
-div {
+main {
 	border-radius: 45px;
 	border-width: 8px;
 	font-size: 120%;
-	width: 99%;
+	width: 98%;
 	max-width: 800px;
 	margin: 0 auto;
 	margin-top: 45px;
-	margin-bottom: 195px;
+	margin-bottom: 100px; /* Big white space between main content and footer */
 	background-image: linear-gradient(#2abaf7, white);
-	box-shadow: -9px 5px #66d2ff; 
+	box-shadow: -9px 5px #66d2ff;
 }
-main {
-	padding-top: 20px;
-	display: flex;
-}
+
+/* Content of the website: Paragraphs and Photo */
 section {
-	flex-basis: 70%;
-	order: 1;
-	padding: 0 2.5% 20px 2.5%;
+	padding: 20px 40px 20px 20px;
+}
+section p { 
+	font-size: 105%;
+	padding-bottom: .4em; /*Spacing for every sentence */
+}
+section h2 { /* Greetings in header: "Hello, I'm Kevin!..." */
+	font-size: 140%;
+	padding: .5em 0 .25em 0;
 }
 
 /* Picture */
+figure {
+	width: 30%;
+	float: left;
+	margin-right: 5px;
+}
 .Kevin {
 	height: 178px;
 	width: 140px;
-	float: left;
 	border: 4mm ridge rgba(170, 50, 220, .6);
 	border-color: #2abaf7;
 	border-radius: 50%;
 	border-width: 4px;
-	margin-left: 15px;
-	margin-right: 60px;
-	margin-top: 18px;
-	margin-bottom: 15px;
+	display: block;
+    margin: 10px auto 10px auto;
 	object-fit: cover;
-}
-figure {
-	float: left;
 }
 
 /* Picture Caption */
 .name {
-	font-size: 140%;
+	font-size: 130%;
+	text-align: center;
 }
 .title {
-	padding-left: 20%;
+	text-align: center;
+	padding-bottom: 10px; /* Increase this if more content is added or text will "leak" below the picture caption */
 	font-size: 80%;
 }
 
-/* Body of the website */
-.greetings {
-	font-size: 120%;
-}
-section h2 { /* Greetings */
-	color: #000000;
-	font-size: 130%;
-	padding: .5em 0 .25em 0;
-}
-section p { /*Spacing for every sentence */
-	padding-bottom: .3em;
-}
-article { /*Bottom border for article*/
-	padding-left: 10px;
-	font-size: 105%;
-	width: 120%;
-}
-
 /* Navigation Buttons */
+.buttons {
+	float: left;
+	margin-bottom: 12px;
+}
 #nav_menu ul {
 	font-size: 80%;
 	list-style-type: none;
@@ -88,14 +84,14 @@ article { /*Bottom border for article*/
 }
 #nav_menu ul li {
 	float: left;
-    width: 33.33%;                 /* 160 / 800 x 100 */
+    width: 90%;   /* Button Width */
 	margin-bottom: 10px;
+	margin-left: 2%;
 }
 #nav_menu ul li a {
     display: block;
     text-align: center;
     padding: 1em 0;
-	margin: 10px 20px 0px 20px;
     text-decoration: none;
 	background-image: url(images/pattern.png);
 	background-color: white;
@@ -121,7 +117,6 @@ article { /*Bottom border for article*/
 /* Contact Me */
 footer {
 	text-align: center;
-	margin-bottom: 25px;
 	margin-top: -20px;
 }
 .phoneIcon {
@@ -137,3 +132,25 @@ footer {
 	font-size: 14px;
 	margin-bottom: -10px;
 }
+
+/*Make text and picture smaller for tiny screens*/
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 90%;
+	}
+	.Kevin {
+	height: 130px;
+	width: 100px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	html {
+		font-size: 80%;
+	}
+	.Kevin {
+	height: 120px;
+	width: 90px;
+	}
+}
+
